@@ -81,11 +81,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BoidSimulationOnGpu\Scripts\GPUBoid.cs" />
     <Compile Include="Assets\BoidSimulationOnGpu\Scripts\GPUBoid.cs.cs" />
     <Compile Include="Assets\SimpleComputeShader\SimpleComputeShader_Array\SimpleComputeShader_Array.cs" />
     <Compile Include="Assets\SimpleComputeShader\SimpleComputeShader_Texture\SimpleComputeShader_Texture.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\BoidSimulationOnGpu\ComputeShaders\Boids.compute" />
     <None Include="Assets\SimpleComputeShader\SimpleComputeShader_Array\SimpleComputeShader_Array.compute" />
     <None Include="Assets\SimpleComputeShader\SimpleComputeShader_Texture\SimpleComputeShader_Texture.compute" />
   </ItemGroup>
