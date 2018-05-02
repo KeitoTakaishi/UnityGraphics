@@ -1,0 +1,14 @@
+﻿#pragma kernel KernelFunction_A
+
+RWTexture2D<float4> textureBuffer;
+float time;
+[numthreads(8, 8, 1)]
+void KernelFunction_A(uint3 dispatchThreadID : SV_DispatchThreadID)
+{
+	float width, height;
+	textureBuffer.GetDimensions(width, height);
+	textureBuffer[dispatchThreadID.xy]	= float4(dispatchThreadID.x / width * abs(sin(time)),
+									   	 dispatchThreadID.x / width,
+										 dispatchThreadID.x / width,
+										 1.0);
+}
